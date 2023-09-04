@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainDiv {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+        .innerDiv {
+            display: flex;
+            align-items: center;
+            width: 50vw;
+            border: 1px solid black;
+            border-radius: 20px;
+            height: 40vh;
+        }
+
+        .mainA {
+            text-decoration: none;
+            margin-top: 20px;
+            border: 2px solid red;
+            padding: 2px 8px;
+            overflow: hidden;
+
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+
+        }
+
+        li {
+            margin-right: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 30px;
+            visibility: hidden;
+            color: white;
+        }
+
+        li:hover a {
+            visibility: visible;
+        }
+
+
+        li:nth-child(1)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            z-index: -1;
+            transition: left 0.3s;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        li:nth-child(2)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            z-index: -1;
+            transition: left 0.3s;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        li:nth-child(3)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            z-index: -1;
+            transition: left 0.3s;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        li:nth-child(4)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -80%;
+            width: 100%;
+            height: 100%;
+            background-color: brown;
+            z-index: -1;
+            transition: left 0.3s;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        li:hover::before {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainDiv">
+        <h1>Task 8</h1>
+        <h1>Arjun Malhotra - 21BBS0110</h1>
+        <div class="innerDiv">
+            <nav>
+                <ul>
+                    <li class="green"><a href="#">Home</a></li>
+                    <li class="blue"><a href="#">About</a></li>
+                    <li class="red"><a href="#">Services</a></li>
+                    <li class="brown"><a href="#">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a href="./index.html" class="mainA">
+            Go back
+        </a>
+    </div>
+</body>
+
+</html>
