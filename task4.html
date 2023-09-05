@@ -16,6 +16,7 @@
             border: 2px solid black;
             padding: 50px;
             border-radius: 20px;
+            width: 1000px;
         }
 
         .mainA {
@@ -27,70 +28,55 @@
         }
 
         a {
-
             border-right: 2px solid black;
             padding: 30px;
         }
 
         .container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             width: 800px;
+            margin: 0 auto;
         }
 
         h1 {
             text-align: center;
         }
 
-        label {
-            display: block;
-            margin-top: 10px;
-            margin-right: 10px;
+        form {
+            padding: 20px;
+            border: 1px solid #ccc;
         }
 
-        input[type="text"],
-        input[type="password"],
-        textarea,
-        input[type="number"] {
+        .form-group {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group input{
+            width: 400px;
+        }
+
+        .form-group select{
+            width: 422px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 16px;
         }
 
-        input[type="radio"] {
-            margin-top: 5px;
-            margin-right: 5px;
-        }
-
-        textarea {
-            resize: vertical;
-        }
-
-        input[type="submit"] {
-            background-color: #3498db;
-            color: #fff;
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #2980b9;
-        }
-
-        .bodyContainer {
-            display: flex;
-            margin-top: 15px;
-            margin-bottom: 20px;
         }
     </style>
     <meta charset="UTF-8">
@@ -103,41 +89,44 @@
     <h1>Arjun Malhotra - 21BBS0110</h1>
     <div class="tableTask">
         <div class="container">
-            <form action="#" method="POST">
-                <div class="bodyContainer">
-                    <label for="full-name">Name:</label>
-                    <input type="text" id="full-name" name="full-name" required>
+            <form action="/" method="post">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname"
+                        placeholder="Enter your full name">
                 </div>
-                <div class="bodyContainer">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username"
+                        placeholder="Enter your username">
                 </div>
-                <div class="bodyContainer">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        placeholder="Enter your password">
                 </div>
-                <div class="bodyContainer">
-                    <label for="re-password">Re-enter Password:</label>
-                    <input type="password" id="re-password" name="re-password" required>
+                <div class="form-group">
+                    <label for="repassword">Re-enter Password</label>
+                    <input type="password" class="form-control" id="repassword" name="repassword"
+                        placeholder="Re-enter your password">
                 </div>
-                <div class="bodyContainer">
-                    <label for="address">Address:</label>
-                    <textarea id="address" name="address" rows="4" required></textarea>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address"
+                        placeholder="Enter your address">
                 </div>
-                <div class="bodyContainer">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" required>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" name="age" placeholder="Enter your age">
                 </div>
-
-                <div class="bodyContainer">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" required>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" name="gender">
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </div>
-
-                <input type="submit" value="Save">
+                <button type="submit" class="btn btn-primary">Save</button>
             </form>
         </div>
     </div>
